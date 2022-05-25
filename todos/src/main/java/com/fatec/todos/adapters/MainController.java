@@ -14,4 +14,8 @@ public class MainController {
 	public ModelAndView home() {
 		return new ModelAndView("index");
 	}
+	@GetMapping("/cadastroProduto")
+	public ModelAndView cadastroProduto() {
+		return new ModelAndView("admin/cadastroProduto");
+	}
 }
