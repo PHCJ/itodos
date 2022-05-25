@@ -2,20 +2,19 @@ package com.fatec.todos.adapters;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping(path = "/todos")
 public class MainController {
-	@GetMapping("/admin")
-	public String AcessarPrincipal() {
-		return "admin/home";
-	}
 	@GetMapping("/")
-	public ModelAndView home() {
+	public ModelAndView index() {
 		return new ModelAndView("index");
 	}
-	@GetMapping("/cadastroProduto")
-	public ModelAndView cadastroProduto() {
-		return new ModelAndView("admin/cadastroProduto");
+	@GetMapping("/home")
+	public ModelAndView home() {
+		return new ModelAndView("admin/home");
 	}
+	
 }
