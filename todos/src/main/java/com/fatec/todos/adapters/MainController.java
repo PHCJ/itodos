@@ -16,5 +16,9 @@ public class MainController {
 	public ModelAndView home() {
 		return new ModelAndView("admin/home");
 	}
+	@GetMapping("/acessibilidade")
+	public ModelAndView acessibilidade() {
+		return new ModelAndView("acessibilidade");
+	}
 	
 }

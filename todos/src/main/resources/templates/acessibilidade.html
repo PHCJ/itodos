@@ -1,76 +1,572 @@
 <!DOCTYPE html>
-
-<!--Página inicial-->
 <html lang="pt-BR" style="width:100%">
 
-	<head>
-		<title>Acessibilidade</title>
+<head>
+	<title>Acessibilidade</title>
+	<!-- Metadados -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/x-icon" th:href="@{/images/icons/favicon.ico}" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/iconic/css/material-design-iconic-font.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/linearicons-v1.0.0/icon-font.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animsition/css/animsition.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/daterangepicker/daterangepicker.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/slick/slick.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/MagnificPopup/magnific-popup.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/perfect-scrollbar/perfect-scrollbar.css}">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+	<!--===============================================================================================-->
+	<script type="text/javascript" th:src="@{js/fonte.js}"></script>
+	<script type="text/javascript" th:src="@{js/contraste.js}"></script>
 
-		<!-- Metadados -->
-		<meta charset="utf-8">
+	<!-- Estilo -->
+	<style>
+		#conteudo {
+			padding: 5%;
+			text-align: justify;
+		}
 
-	</head>
+		.imagemrodape {
+			/*background-image: url("images/rodape.fw.png"); /* The image used */
+			background-color: #E17525;
+			/* Used if the image is unavailable */
+			height: 56px;
+			/* You must set a specified height */
+			background-position: center;
+			/* Center the image */
+			background-repeat: no-repeat;
+			/* Do not repeat the image */
+			background-size: cover;
+			/* Resize the background image to cover the entire container */
+			text-align: center;
+			border-top: #8F4813 solid 3px;
+			padding: 1em;
+		}
 
-	<body style="width:100%;">
+		h2 {
+			margin-top: 40px;
+		}
 
- 
+		.titulo {
+			text-align: center;
+			color: #E17525;
+		}
+	</style>
 
-       <!--Conteúdo da página inicial-->
+</head>
 
-            <!--Section principal - conteúdo em geral-->
-        <section id="conteudo">
-            <br>
-            <ul class="breadcrump">
-                <li><a href="index.html" style="color: #86A569;">Início</a></li>
-                <li>Acessibilidade</li>	
-            </ul>
+<body class="animsition">
 
-            <h2 class="titulo_acess">Página Acessibilidade</h2>	
-        
-                <section id="bloco_acess">
-                    
-                    <main id="conteudo_acess" tabindex="0">
-                       <br><br>
-                        <p class="acessibilidade">Este site foi desenvolvido para que pessoas com deficiência visual, baixa visão, daltonismo, deficiência auditiva e mobilidade reduzida possam navegar por meio de recursos como alto contraste, aumento de fonte, teclas de atalho, tradução para a Língua Brasileira de Sinais e navegação por teclado.</p>
-                        <p class="acessibilidade">Para aumentar a fonte, é só clicar no símbolo de A+ em nossa barra de acessibilidade. Caso queira voltar ao tamanho de fonte original, é só clicar em A-.</p>
-                        <p class="acessibilidade">Se for necessário, você também pode usar o zoom nativo do seu navegador, pressionando as teclas “Ctrl” e “+” para aumentar todo o site e “Ctrl” e “-“ para diminuir. Para voltar ao padrão, pressione “Ctrl” e “0”.</p>
-                        <p class="acessibilidade">Este site tem melhor acessibilidade quando acessado nas versões mais atualizadas do seu navegador web. Utilize sempre a versão mais recente de seu software.</p>
-                       
-                        <br><p class="acessibilidade"><b>Teclas de atalho por navegadores</b></p><br>
-                        
-                        <p class="acessibilidade"><u>Internet Explorer e Google Chrome:</u> “Alt” + “1” - ir para o conteúdo. “Alt” + “2” - ir para o menu. “Alt” + “3” - ir para o rodapé.</p>
-        
-                        <p class="acessibilidade"><u>Firefox:</u> “Alt” + “Shift” + “número”.</p>
-        
-                        <p class="acessibilidade"><u>Opera:</u> “Shift” + “Escape” + “número”.</p>
+	<!-- Header -->
+	<header>
+		<!--Libras-->
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
+		<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		<script>
+			new window.VLibras.Widget('https://vlibras.gov.br/app');
+		</script>
 
-                        <p class="acessibilidade"><u>Safari e OmniWeb:</u> “Ctrl” + “número”.</p>
-        
-                        <br><b><p class="acessibilidade">Navegação por tabulação</p></b><br>
-                        <p class="acessibilidade">Use a tecla Tab para navegar por elementos que recebem ação do usuário no site, tais como links, botões, campos de formulário e outros na ordem em que eles são apresentados na página, e <u>Shift + Tab</u> para retornar. Use as setas direcionais para acessar as informações textuais.</p>
-                      
-                        <br><b><p class="acessibilidade">LIBRAS - Língua Brasileira de Sinais</p></b><br>
-                        <p class="acessibilidade">Este site é acessível em LIBRAS através do <a href="http://www.vlibras.gov.br/" target="_blank"><b class="fontepreta">VLibras</b></a>.</p>
-                        <p class="acessibilidade">-Do lado direito de cada página do site existe o ícone de um Widget informando que o site é acessível em LIBRAS.</p>
-                        <p class="acessibilidade">-Para traduzir, basta clicar sobre o ícone e selecionar o texto que deseja traduzir.</p><br>
-                        <br><br>
-                    </main>	
-        
-                </section>
-                <br><br>
-        </section>
-        <br><br>
+		<!-- Header desktop -->
+		<div class="container-menu-desktop" id="menu">
+			<!-- Topbar -->
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar flex-w h-full">
 
-        <!--Rodapé-->
-         <footer id="rodape">
-            Todos os direitos reservados &copy; 2021
-        </footer>
+						<a style="color:#FFF;" href="#conteudo" accesskey="1" title="Ir diretamente para o conteúdo"
+							class="flex-c-m trans-04 p-lr-7">
+							Ir para o conteúdo [1]
+						</a>
+						<a style="color:#FFF;" href="#menu" accesskey="2" title="Ir diretamente para o menu"
+							class="flex-c-m trans-04 p-lr-7">
+							Ir para o menu [2]
+						</a>
+						<a style="color:#FFF;" href="#rodape" accesskey="3" title="Ir diretamente para o rodapé"
+							class="flex-c-m trans-04 p-lr-7">
+							Ir para o rodapé [3]
+						</a>
+					</div>
 
-    </body>
+					<div class="right-top-bar flex-w h-full">
+						<a href="acessibilidade.html" title="Ir para a página de Acessibilidade"
+							class="flex-c-m trans-04 p-lr-7">
+							Acessibilidade
+						</a>
+
+						<a href="#" class="flex-c-m trans-04 p-lr-7">
+							Com Contraste
+						</a>
+
+						<a href="#" class="flex-c-m trans-04 p-lr-7">
+							Sem Contraste
+						</a>
+
+						<a href="javascript:void(0);" title="Aumentar a fonte (Ctrl +)" id="aumenta"
+							class="flex-c-m trans-04 p-lr-7">
+							A +
+						</a>
+
+						<a href="javascript:void(0);" title="Diminuir a Fonte (Ctrl -)" id="diminui"
+							class="flex-c-m trans-04 p-lr-7">
+							A -
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+
+					<!-- Logo desktop -->
+					<a href="index.html" class="logo">
+						<img src="images/icons/logo-01.png" alt="Logo">
+					</a>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+
+							<li class="active-menu">
+								<a href="product.html">Produtos</a>
+							</li>
+							<li>
+								<a href="product.html">Feminino</a>
+							</li>
+							<li>
+								<a href="product.html">Masculino</a>
+							</li>
+							<li>
+								<a href="about.html">Sobre</a>
+							</li>
+							<li>
+								<a th:href="@{/todos/home}">Colaborador</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Icon header -->
+					<div class="wrap-icon-header flex-w flex-r-m">
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							<i class="zmdi zmdi-search"></i>
+						</div>
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+							<i class="zmdi zmdi-account"></i>
+
+						</div>
+
+						<a href="contact.html">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+								<i class="zmdi zmdi-phone"></i>
+							</div>
+						</a>
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  js-show-cart">
+							<i class="zmdi zmdi-shopping-cart"></i>
+						</div>
+
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo mobile -->
+			<div class="logo-mobile">
+				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+			</div>
+
+			<!-- Icon header -->
+			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+					<i class="zmdi zmdi-search"></i>
+				</div>
+
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10">
+					<i class="zmdi zmdi-account"></i>
+				</a>
+
+				<a href="contact.html" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10">
+					<i class="zmdi zmdi-phone"></i>
+				</a>
+
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
+					data-notify="2">
+					<i class="zmdi zmdi-shopping-cart"></i>
+				</div>
+
+			</div>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="menu-mobile">
+			<ul class="topbar-mobile">
+
+				<li>
+					<div class="right-top-bar flex-w h-full">
+						<a href="acessibilidade.html" title="Ir para a página de Acessibilidade"
+							class="flex-c-m trans-04 p-lr-10">
+							Acessibilidade
+						</a>
+
+						<a href="#" class="flex-c-m trans-04 p-lr-10">
+							Com Contraste
+						</a>
+
+						<a href="#" class="flex-c-m trans-04 p-lr-10">
+							Sem Contraste
+						</a>
+
+						<a href="javascript:void(0);" title="Aumentar a fonte (Ctrl +)" id="aumenta"
+							class="flex-c-m trans-04 p-lr-10">
+							A +
+						</a>
+
+						<a href="javascript:void(0);" title="Diminuir a Fonte (Ctrl -)" id="diminui"
+							class="flex-c-m trans-04 p-lr-10">
+							A -
+						</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="main-menu-m">
+				<li>
+					<a href="product.html">Produtos</a>
+				</li>
+
+				<li>
+					<a href="product.html">Feminino</a>
+				</li>
+
+				<li>
+					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Masculino</a>
+				</li>
+
+				<li>
+					<a href="about.html">Sobre</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- Modal Search - Barra de Pesquisa -->
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="images/icons/icon-close2.png" alt="CLOSE">
+				</button>
+
+				<form class="wrap-search-header flex-w p-l-15">
+					<button class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+					<input class="plh3" type="text" name="search" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<!-- Cart -->
+	<div class="wrap-header-cart js-panel-cart">
+		<div class="s-full js-hide-cart"></div>
+
+		<div class="header-cart flex-col-l p-l-65 p-r-25">
+			<div class="header-cart-title flex-w flex-sb-m p-b-8">
+				<span class="mtext-103 cl2">
+					Your Cart
+				</span>
+
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+					<i class="zmdi zmdi-close"></i>
+				</div>
+			</div>
+
+			<div class="header-cart-content flex-w js-pscroll">
+				<ul class="header-cart-wrapitem w-full">
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-01.jpg" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								White Shirt Pleat
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $19.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-02.jpg" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Converse All Star
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $39.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-03.jpg" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Nixon Porter Leather
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $17.00
+							</span>
+						</div>
+					</li>
+				</ul>
+
+				<div class="w-full">
+					<div class="header-cart-total w-full p-tb-40">
+						Total: $75.00
+					</div>
+
+					<div class="header-cart-buttons flex-w w-full">
+						<a href="shoping-cart.html"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+							View Cart
+						</a>
+
+						<a href="shoping-cart.html"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+							Check Out
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="conteudo">
+
+		<h2 class="titulo">Informações sobre a Acessibilidade</h2>
+
+		<section id="bloco_acess">
+
+			<main id="conteudo_acess" tabindex="0">
+				<br><br>
+				<p class="acessibilidade">Este site foi desenvolvido para que pessoas com deficiência visual, baixa
+					visão, daltonismo, deficiência auditiva e mobilidade reduzida possam navegar por meio de recursos
+					como alto contraste, aumento de fonte, teclas de atalho, tradução para a Língua Brasileira de Sinais
+					e navegação por teclado.
+					Para aumentar a fonte, é só clicar no símbolo de A+ em nossa barra de acessibilidade. Caso queira
+					voltar ao tamanho de fonte original, é só clicar em A-.
+					Se for necessário, você também pode usar o zoom nativo do seu navegador, pressionando as teclas
+					“Ctrl” e “+” para aumentar todo o site e “Ctrl” e “-“ para diminuir. Para voltar ao padrão,
+					pressione “Ctrl” e “0”.
+					Este site tem melhor acessibilidade quando acessado nas versões mais atualizadas do seu navegador
+					web. Utilize sempre a versão mais recente de seu software.</p>
+
+				<br>
+				<p class="acessibilidade"><b>Teclas de atalho por navegadores</b></p><br>
+
+				<p class="acessibilidade"><u>Internet Explorer e Google Chrome:</u> “Alt” + “1” - ir para o conteúdo.
+					“Alt” + “2” - ir para o menu. “Alt” + “3” - ir para o rodapé.</p>
+
+				<p class="acessibilidade"><u>Firefox:</u> “Alt” + “Shift” + “número”.</p>
+
+				<p class="acessibilidade"><u>Opera:</u> “Shift” + “Escape” + “número”.</p>
+
+				<p class="acessibilidade"><u>Safari e OmniWeb:</u> “Ctrl” + “número”.</p>
+
+				<br><b>
+					<p class="acessibilidade">Navegação por tabulação</p>
+				</b><br>
+				<p class="acessibilidade">Use a tecla Tab para navegar por elementos que recebem ação do usuário no
+					site, tais como links, botões, campos de formulário e outros na ordem em que eles são apresentados
+					na página, e <u>Shift + Tab</u> para retornar. Use as setas direcionais para acessar as informações
+					textuais.</p>
+
+				<br><b>
+					<p class="acessibilidade">LIBRAS - Língua Brasileira de Sinais</p>
+				</b><br>
+				<p class="acessibilidade"> Este site é acessível em LIBRAS através do <a
+						href="http://www.vlibras.gov.br/" target="_blank"><b class="fontepreta">VLibras</b></a>.</p>
+				<p class="acessibilidade">- Do lado direito de cada página do site existe o ícone de um Widget
+					informando que o site é acessível em LIBRAS.</p>
+				<p class="acessibilidade">- Para traduzir, basta clicar sobre o ícone e selecionar o texto que deseja
+					traduzir.</p>
+			</main>
+
+		</section>
+	</section>
+
+
+	<!--Rodapé-->
+
+	<footer id="rodape" class="p-t-30">
+
+		<div class="imagemrodape">
+
+			<a href="#" class="fs-22 cl0 hov-cl1 trans-04 m-r-16">
+				<i class="fa fa-whatsapp"></i>
+			</a>
+
+			<a href="#" class="fs-22 cl0 hov-cl1 trans-04 m-r-16">
+				<i class="fa fa-github"></i>
+			</a>
+
+			<a href="#" class="fs-22 cl0 hov-cl1 trans-04 m-r-16">
+				<i class="fa fa-envelope-o"></i>
+			</a>
+
+		</div>
+	</footer>
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function () {
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/parallax100/parallax100.js"></script>
+	<script>
+		$('.parallax100').parallax100();
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('.gallery-lb').each(function () { // the containers for all your galleries
+			$(this).magnificPopup({
+				delegate: 'a', // the selector for gallery item
+				type: 'image',
+				gallery: {
+					enabled: true
+				},
+				mainClass: 'mfp-fade'
+			});
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function (e) {
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function () {
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function () {
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		/*---------------------------------------------*/
+
+		$('.js-addcart-detail').each(function () {
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function () {
+			$(this).css('position', 'relative');
+			$(this).css('overflow', 'hidden');
+			var ps = new PerfectScrollbar(this, {
+				wheelSpeed: 1,
+				scrollingThreshold: 1000,
+				wheelPropagation: false,
+			});
+
+			$(window).on('resize', function () {
+				ps.update();
+			})
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
 
 </html>
-
-
-
-
-
