@@ -1,6 +1,11 @@
 package com.fatec.todos.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("Fornecedor")
 public class Fornecedor {
+	@Id
     private Long id;
     private String cnpj;
     private String nome;

@@ -9,33 +9,35 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" th:href="@{/css/styleHomeUser.css}">
+	<link rel="stylesheet" th:href="@{/css/styleHomeUser.css}" type="text/css">
 	<script type="text/javascript" th:src="@{/js/homeUser.js}"></script>
 </head>
 
 <body>
 	<div class='dashboard'>
 		<div class="dashboard-nav">
-
 			<header>
-				<a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
-				<a href="#" class="brand-logo"><i class="fas fa-info"></i><span>TODOS</span></a>
+				<a href="#" id="userLogo">
+					<img th:src="@{/images/icons/logo-01.png}" alt="imagem logo">
+				</a>
 			</header>
 
 			<nav class="dashboard-nav-list">
-				<a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>Home </a>
+				<a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>Home</a>
 				<a href="#" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> dashboard </a>
 
 				<div class='dashboard-nav-dropdown'>
-					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-file-upload"></i> Cadastro </a>
+					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+							class="fas fa-file-upload"></i> Cadastro </a>
 					<div class='dashboard-nav-dropdown-menu'>
-						<a th:href="@{cadastroProduto}" class="dashboard-nav-dropdown-item">Produto</a>
-						<a href="#" class="dashboard-nav-dropdown-item">Fornecedor</a>
+						<a th:href="@{/todos/produto}" class="dashboard-nav-dropdown-item">Produto</a>
+						<a th:href="@{/todos/fornecedor}" class="dashboard-nav-dropdown-item">Fornecedor</a>
 					</div>
 				</div>
 
 				<div class='dashboard-nav-dropdown'>
-					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-money-check-alt"></i> Consultar </a>
+					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
+							class="fas fa-money-check-alt"></i> Consultar </a>
 					<div class='dashboard-nav-dropdown-menu'>
 						<a href="#" class="dashboard-nav-dropdown-item">Produto</a>
 						<a href="#" class="dashboard-nav-dropdown-item">Fornecedor</a>
@@ -43,7 +45,8 @@
 				</div>
 
 				<div class='dashboard-nav-dropdown'>
-					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Usuário </a>
+					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i>
+						Usuário </a>
 					<div class='dashboard-nav-dropdown-menu'>
 						<a href="#" class="dashboard-nav-dropdown-item">Cadastrar</a>
 						<a href="#" class="dashboard-nav-dropdown-item">Editar</a>

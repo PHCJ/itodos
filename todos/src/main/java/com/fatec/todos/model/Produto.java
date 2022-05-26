@@ -1,6 +1,11 @@
 package com.fatec.todos.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("Produto")
 public class Produto {
+	@Id
     private Long id;
     private String codBarras;
     private String nome;
@@ -19,6 +24,7 @@ public class Produto {
 		this.cor = cor;
 		this.tamanho = tamanho;
 		this.quantidade = quantidade;
+		this.custo = custo;
 	}
 
     public Long getId() {
