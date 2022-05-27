@@ -44,13 +44,13 @@ p {
 }
 
 a {
-    color: #3f84fc;
+    color: #E17525;
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #0458eb;
+    color: #fcc63f;
     text-decoration: underline;
 }
 
@@ -141,7 +141,7 @@ h1, .h1 {
     top: 0;
     bottom: 0;
     overflow: auto;
-    background-color: #373193;
+    background-color: #E17525;
 }
 
 .dashboard-compact .dashboard-nav {
@@ -179,7 +179,7 @@ h1, .h1 {
 }
 
 .dashboard-nav {
-    background-color: #443ea2;
+    background-color: #3C4458;
 }
 
 .dashboard-nav a {
@@ -246,7 +246,7 @@ h1, .h1 {
 }
 
 .dashboard-nav-item:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(186, 143, 18, 0.04);
 }
 
 .active {
@@ -266,7 +266,7 @@ h1, .h1 {
 }
 
 .dashboard-nav-dropdown.show {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(186, 143, 18, 0.04);
 }
 
 .dashboard-nav-dropdown.show > .dashboard-nav-dropdown-toggle {
@@ -301,7 +301,7 @@ h1, .h1 {
 }
 
 .dashboard-nav .dashboard-nav-dropdown-toggle:after {
-    border-top-color: rgba(255, 255, 255, 0.72);
+    border-top-color: rgba(186 , 143, 18, 0.72);
 }
 
 .dashboard-nav-dropdown-menu {
@@ -328,7 +328,7 @@ h1, .h1 {
 }
 
 .dashboard-nav-dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(186, 143, 18, 0.04);
 }
 
 .menu-toggle {
@@ -347,12 +347,12 @@ h1, .h1 {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #443ea2;
+    color: #3C4458;
 }
 
 .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
     text-decoration: none;
-    color: #875de5;
+    color: #2F3444;
 }
 
 .menu-toggle i {

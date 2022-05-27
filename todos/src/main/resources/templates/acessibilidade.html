@@ -9,35 +9,35 @@
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/x-icon" th:href="@{/images/icons/favicon.ico}" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{fonts/iconic/css/material-design-iconic-font.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{fonts/linearicons-v1.0.0/icon-font.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/linearicons-v1.0.0/icon-font.min.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}"/>
+	<!--===============================================================================================
+	<link rel="stylesheet" th:href="@{/vendor/animsition/css/animsition.min.css}"/>-->
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/animsition/css/animsition.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/daterangepicker/daterangepicker.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/daterangepicker/daterangepicker.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/slick/slick.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/slick/slick.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/MagnificPopup/magnific-popup.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/MagnificPopup/magnific-popup.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/perfect-scrollbar/perfect-scrollbar.css}"/>
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{vendor/perfect-scrollbar/perfect-scrollbar.css}">
+	<link rel="stylesheet" th:href="@{/css/util.css}" />
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
-	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
-	<!--===============================================================================================-->
-	<script type="text/javascript" th:src="@{js/fonte.js}"></script>
-	<script type="text/javascript" th:src="@{js/contraste.js}"></script>
+	<script th:src="@{/js/fonte.js}"></script>
+	<script th:src="@{/js/contraste.js}"></script>
 
 	<!-- Estilo -->
 	<style>
@@ -113,7 +113,7 @@
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
-						<a href="acessibilidade.html" title="Ir para a página de Acessibilidade"
+						<a th:href="@{acessibilidade}" title="Ir para a página de Acessibilidade"
 							class="flex-c-m trans-04 p-lr-7">
 							Acessibilidade
 						</a>
@@ -143,8 +143,8 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="index.html" class="logo">
-						<img src="images/icons/logo-01.png" alt="Logo">
+					<a th:href="@{index.html}" class="logo">
+						<img th:src="@{/images/icons/logo-01.png}" alt="Logo"/>
 					</a>
 
 					<!-- Menu desktop -->
@@ -201,7 +201,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo mobile -->
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="index.html"><img th:src="@{images/icons/logo-01.png}" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -565,7 +565,7 @@
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script th:src="@{js/main.js}"></script>
 
 </body>
 
