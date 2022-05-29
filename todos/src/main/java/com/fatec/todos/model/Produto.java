@@ -3,10 +3,10 @@ package com.fatec.todos.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("Produto")
+@Document
 public class Produto {
 	@Id
-    private Long id;
+    private String id;
     private String codBarras;
     private String nome;
     private String descricao;
@@ -27,11 +27,11 @@ public class Produto {
 		this.custo = custo;
 	}
 
-    public Long getId() {
+    public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

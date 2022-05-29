@@ -20,5 +20,8 @@ public class MainController {
 	public ModelAndView acessibilidade() {
 		return new ModelAndView("acessibilidade");
 	}
-	
+	@GetMapping("/product")
+	public ModelAndView product() {
+		return new ModelAndView("product");
+	}
 }
