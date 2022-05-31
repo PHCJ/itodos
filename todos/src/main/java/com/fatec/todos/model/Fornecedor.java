@@ -10,8 +10,12 @@ import lombok.Data;
 public class Fornecedor {
 	@Id
     private String id;
-    private String cnpj;
-    private String nome;
-    private String descricao;
-    private String telefone;
+    @SuppressWarnings("unused")
+	private String cnpj;
+    @SuppressWarnings("unused")
+	private String nome;
+    @SuppressWarnings("unused")
+	private String descricao;
+    @SuppressWarnings("unused")
+	private String telefone;
 }

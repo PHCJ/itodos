@@ -47,5 +47,12 @@ public class GUIProdutoController {
 		}
 		return modelAndView;
 	}
+	
+	@GetMapping("/pesquisaProduto")
+	public ModelAndView retornaFormDePesquisaDeProduto(Produto produto) {
+		ModelAndView mv = new ModelAndView("admin/pesquisaProduto");
+		mv.addObject("produto", produto);
+		return mv;
+	}
 
 }
