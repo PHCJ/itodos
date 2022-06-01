@@ -17,41 +17,46 @@
             <form th:action="@{/todos/produtos}" th:object="${produto}" method="post">
                 <div class="row">
                     <label for="codBarras">Código de barras</label>
-                    <input type="text" name="codBarras" class="form-control">
+                    <input type="text" name="codBarras" class="form-control" required>
 
                 </div>
                 <div class="row">
                     <label for="nome" class="col-form-label">Nome</label>
-                    <input type="text" name="nome" class="form-control">
+                    <input type="text" name="nome" class="form-control" required>
 
                 </div>
                 <div class="row">
                     <label for="descricao" class="col-form-label">Descrição</label>
-                    <input type="text" name="descricao" class="form-control">
+                    <input type="text" name="descricao" class="form-control" required>
 
                 </div>
                 <div class="row">
                     <label for="cor" class="col-form-label">Cor</label>
-                    <input type="text" name="cor" class="form-control">
+                    <input type="text" name="cor" class="form-control" required>
 
                 </div>
                 <div class="row">
                     <label for="tamanho" class="form-label">Tamanho</label>
-                    <input type="text" name="tamanho" class="form-control">
+                    <input type="text" name="tamanho" class="form-control" required>
                 </div>
                 <div class="row">
                     <label for="quantidade" class="col-form-label">Quantidade</label>
-                    <input type="text" name="quantidade" class="form-control">
+                    <input type="number" name="quantidade" class="form-control" required>
+
+                </div>
+                <div class="row">
+                    <label for="custo" class="col-form-label">Custo</label>
+                    <input type="text" name="custo" class="form-control" required>
 
                 </div>
                 <br/>
-                <!--
+                
                 <div class="row">
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Cadastrar">
                     </div>
                 </div>
-                -->
+                
             </form>
 
         </div>

@@ -36,7 +36,7 @@ public class MantemProdutoI implements MantemProduto{
 	@Override
 	public Optional<Produto> consultaPorCodBarras(String codBarras) {
 		logger.info(">>>> consultaPorCodBarras solicitado");
-		return this.produtoRepository.findByCodBarras(codBarras);
+		return produtoRepository.findByCodBarras(codBarras);
 	}
 
 	@Override

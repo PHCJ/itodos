@@ -1,12 +1,14 @@
 package com.fatec.todos.model;
 
+import javax.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document("produto")
 public class Produto {
 	@Id
     private String id;
+	@NotBlank(message = "O código de barras do produto é obrigatório")
     private String codBarras;
     private String nome;
     private String descricao;

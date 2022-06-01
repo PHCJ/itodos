@@ -32,9 +32,15 @@ public class GUIProdutoController {
 
 	@PostMapping("/produtos")
 	public ModelAndView salvarProduto(@Valid Produto produto, BindingResult result) {
-		ModelAndView modelAndView = new ModelAndView("consultarProduto");
+		ModelAndView modelAndView = new ModelAndView("admin/cadastroProduto");
+		logger.info(produto.getCodBarras());
+		logger.info(produto.getNome());
+		logger.info(produto.getCor());
+		logger.info(produto.getTamanho());
+		logger.info(produto.getQuantidade());
+		logger.info(produto.getCusto());
 		if (result.hasErrors()) {
-			modelAndView.setViewName("cadastrarProduto");
+			modelAndView.setViewName("admin/home");
 		} else {
 			if (servico.salvarProduto(produto).isPresent()) {
 				logger.info(">>>>>> controller chamou cadastrar e consulta todos");
