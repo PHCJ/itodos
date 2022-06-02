@@ -43,7 +43,7 @@
 					<a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
 							class="fas fa-money-check-alt"></i> Consultar </a>
 					<div class='dashboard-nav-dropdown-menu'>
-						<a href="#" class="dashboard-nav-dropdown-item">Produto</a>
+						<a th:href="@{/todos/produtos}" class="dashboard-nav-dropdown-item">Produto</a>
 						<a href="#" class="dashboard-nav-dropdown-item">Fornecedor</a>
 					</div>
 				</div>
@@ -67,7 +67,6 @@
 			<div class='dashboard-content'>
 				<div class='container'>
 					<div th:replace="fragments/formProduto:: formProduto"></div>
-					
 				</div>
 			</div>
 		</div>

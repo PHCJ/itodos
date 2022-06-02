@@ -12,8 +12,10 @@
 
 <body>
     <div class="row" th:fragment="formProduto">
-        <h1>CADASTRO DE PRODUTO</h1>
-        <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6">
+        <div class="row titulo">
+            <h1>CADASTRO DE PRODUTO</h1>
+        </div>
+        <div class="row col-sm-10 col-md-8 col-lg-7 col-xl-6">
             <form th:action="@{/todos/produtos}" th:object="${produto}" method="post">
                 <div class="row">
                     <label for="codBarras">Código de barras</label>
@@ -49,18 +51,19 @@
                     <input type="text" name="custo" class="form-control" required>
 
                 </div>
-                <br/>
-                
+                <div class="row">
+                    <label for="status" class="col-form-label">Status</label>
+                    <input type="text" name="status" class="form-control" required>
+                </div>
+                <br />
+
                 <div class="row">
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Cadastrar">
                     </div>
                 </div>
-                
             </form>
-
         </div>
-    </div>
     </div>
 </body>
 

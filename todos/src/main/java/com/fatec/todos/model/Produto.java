@@ -16,10 +16,11 @@ public class Produto {
     private String tamanho;
     private int quantidade;
 	private double custo;
+	private String status;
 
-    public Produto() {}
+	public Produto() {}
 	
-	public Produto(String codBarras, String nome, String descricao, String cor, String tamanho, int quantidade, double custo) {
+	public Produto(String codBarras, String nome, String descricao, String cor, String tamanho, int quantidade, double custo, String status) {
 		this.codBarras = codBarras;
 		this.nome = nome;
 		this.descricao = descricao;
@@ -27,6 +28,7 @@ public class Produto {
 		this.tamanho = tamanho;
 		this.quantidade = quantidade;
 		this.custo = custo;
+		this.status = status;
 	}
 
     public String getId() {
@@ -92,4 +94,13 @@ public class Produto {
 	public double getCusto() {
 		return custo;
 	}	
+
+	
+    public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 }

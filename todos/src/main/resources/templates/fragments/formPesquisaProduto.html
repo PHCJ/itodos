@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Produto</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="row" th:fragment="formPesquisaProduto">
+        
+        <h1>PRODUTOS CADASTRADOS</h1>
+        <div class="panel-body col" th:switch="${produtos}">
+            <h5 th:case="null">Não existem produtos cadastrados ainda!</h5>
+            <div th:case="*">
+                <table  class="table  table-striped  table-bordered  table-hover  table-condensed  js-sticky-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código de barras</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>cor</th>
+                            <th>Tamanho</th>
+                            <th>Quantidade</th>
+                            <th>Custo</th>
+                            <th>Status</th>
+                            <th>Operação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="produto : ${produtos}">
+                            <td th:text="${produto.id}"></td>
+                            <td th:text="${produto.codBarras}"></td>
+                            <td th:text="${produto.nome}"></td>
+                            <td th:text="${produto.descricao}"></td>
+                            <td th:text="${produto.cor}"></td>
+                            <td th:text="${produto.tamanho}"></td>
+                            <td th:text="${produto.quantidade}"></td>
+                            <td th:text="${produto.custo}"></td>
+                            <td th:text="${produto.status}"></td>
+                            <td>
+                                <div class="btn-group pull-right">
+                                    <a class="btn btn-sm btn-primary"
+                                        th:href="@{/todos/produtos/{codBarras}(codBarras=${produto.codBarras})}">Editar</a>
+                                    <a class="delete btn btn-sm btn-danger"
+                                        th:href="@{/todos/produtos/id/{id}(id=${produto.id})}">Excluir</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
