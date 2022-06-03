@@ -28,4 +28,8 @@ public class MainController {
 	public ModelAndView sobre() {
 		return new ModelAndView("about");
 	}
+	@GetMapping("/contact")
+	public ModelAndView contato() {
+		return new ModelAndView("contact");
+	}
 }

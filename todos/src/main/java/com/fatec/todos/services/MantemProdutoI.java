@@ -55,13 +55,18 @@ public class MantemProdutoI implements MantemProduto{
 	@Override
 	public Optional<Produto> atualizarProduto(Produto produto) {
 		logger.info(">>>> atualizarProduto");
-		return null;
+		Optional<Produto> umProduto = consultaPorId(produto.getId());
+		if(umProduto.isPresent()) {
+			return Optional.ofNullable(produtoRepository.save(produto));
+		}
+		else
+			return Optional.empty();
 	}
 
 	@Override
-	public Optional<Produto> excluirProduto(String id) {
+	public void excluirProduto(String id) {
 		logger.info(">>>> excluirProduto");
-		return null;
+		produtoRepository.deleteById(id);
 	}
 	
 	

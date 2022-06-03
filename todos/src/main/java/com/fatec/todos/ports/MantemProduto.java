@@ -11,7 +11,7 @@ public interface MantemProduto {
 	Optional<Produto> consultaPorCodBarras(String codBarras);
 	Optional<Produto> salvarProduto(Produto produto);
 	Optional<Produto> atualizarProduto(Produto produto);
-	Optional<Produto> excluirProduto(String id);
+	void excluirProduto(String id);
 	//Optional<Produto> desativarProduto(Produto produto);
 	//Optional<Produto> ativarProduto(Produto produto);
 }

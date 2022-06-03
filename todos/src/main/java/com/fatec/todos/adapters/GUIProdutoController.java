@@ -37,7 +37,22 @@ public class GUIProdutoController {
 		modelAndView.addObject("produtos", mantemProduto.consultarTodosOsProdutos());
 		return modelAndView;
 	}
-
+	
+	@GetMapping("/produtos/id/{id}")
+	public ModelAndView excluirNoFormDeConsultaProduto(@PathVariable("id") String id) {
+		logger.info(">>>>>> servico de exclusao chamado para o id => " + id);
+		mantemProduto.excluirProduto(id);
+		ModelAndView modelAndView = new ModelAndView("admin/consultaProduto");
+		modelAndView.addObject("produtos", mantemProduto.consultarTodosOsProdutos());
+		return modelAndView;
+	}
+	
+	@GetMapping("/produtos/{codBarras}")
+	public ModelAndView retornaFormParaEditarProduto(@PathVariable("codBarras") String codBarras) {
+		ModelAndView modelAndView = new ModelAndView("admin/atualizarProduto");
+		modelAndView.addObject("produto", mantemProduto.consultaPorCodBarras(codBarras).get());
+		return modelAndView;
+	}
 
 	@PostMapping("/produtos")
 	public ModelAndView salvarProduto(@Valid Produto produto, BindingResult result) {
@@ -59,12 +74,12 @@ public class GUIProdutoController {
 	
 	@PostMapping("/produtos/id/{id}")
 	public ModelAndView atualizaProduto(@PathVariable("id") String id, @Valid Produto produto, BindingResult result) {
-		ModelAndView modelAndView = new ModelAndView("consultarProduto");
+		ModelAndView modelAndView = new ModelAndView("admin/consultaProduto");
 		logger.info(">>>>>> servico para atualizacao de dados chamado para o id => " + id);
 		if (result.hasErrors()) {
 			logger.info(">>>>>> servico para atualizacao de dados com erro => " + result.getFieldError().toString());
 			produto.setId(id);
-			return new ModelAndView("atualizarProduto");
+			return new ModelAndView("admin/atualizarProduto");
 		} else {
 			mantemProduto.atualizarProduto(produto);
 			modelAndView.addObject("produtos", mantemProduto.consultarTodosOsProdutos());
