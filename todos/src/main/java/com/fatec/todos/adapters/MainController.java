@@ -32,4 +32,8 @@ public class MainController {
 	public ModelAndView contato() {
 		return new ModelAndView("contact");
 	}
+	@GetMapping("/shoping-cart")
+	public ModelAndView carrinho() {
+		return new ModelAndView("shoping-cart");
+	}
 }

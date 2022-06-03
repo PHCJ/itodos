@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-	<title>Product</title>
+	<title>Sobre</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -11,13 +11,15 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/fonts/iconic/css/material-design-iconic-font.min.css}" >
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/fonts/linearicons-v1.0.0/icon-font.min.css}" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animate/animate.css}" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/vendor/css-hamburgers/hamburgers.min.css}" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{/vendor/animsition/css/animsition.min.css}">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" th:href="@{/vendor/select2/select2.min.css}" />
 	<!--===============================================================================================-->
@@ -211,23 +213,7 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">
-						<a style="color:#FFF;" href="#conteudo" accesskey="1" title="Ir diretamente para o conteúdo"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o conteúdo [1]
-						</a>
-						<a style="color:#FFF;" href="#menu" accesskey="2" title="Ir diretamente para o menu"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o menu [2]
-						</a>
-						<a style="color:#FFF;" href="#rodape" accesskey="3" title="Ir diretamente para o rodapé"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o rodapé [3]
-						</a>
-					</div>
-				</li>
-
+				
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a th:href="@{/todos/acessibilidade}" title="Ir para a página de Acessibilidade"
@@ -281,6 +267,95 @@
 		</div>
 	</header>
 
+<!-- Cart -->
+	<div class="wrap-header-cart js-panel-cart">
+		<div class="s-full js-hide-cart"></div>
+
+		<div class="header-cart flex-col-l p-l-65 p-r-25">
+			<div class="header-cart-title flex-w flex-sb-m p-b-8">
+				<span class="mtext-103 cl2">
+					Carrinho
+				</span>
+
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+					<i class="zmdi zmdi-close"></i>
+				</div>
+			</div>
+
+			<div class="header-cart-content flex-w js-pscroll">
+				<ul class="header-cart-wrapitem w-full">
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img th:src="@{/images/item-cart-01.jpg}" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Camisa Branca
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $29.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img th:src="@{/images/item-cart-02.jpg}" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								All Star
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $79.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img th:src="@{/images/item-cart-03.jpg}" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Nixon - Relógio
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $117.00
+							</span>
+						</div>
+					</li>
+				</ul>
+
+				<div class="w-full">
+					<div class="header-cart-total w-full p-tb-40">
+						Total: $225.00
+					</div>
+
+					<div class="header-cart-buttons flex-w w-full">
+						<a href="shoping-cart.html"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+							Ver carrinho
+						</a>
+
+						<a href="shoping-cart.html"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+							Finalizar o pedido
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 
 
 	<!-- Content page -->
@@ -290,17 +365,26 @@
 				<div class="col-md-7 col-lg-8">
 					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
 						<h3 class="mtext-111 cl2 p-b-16">
-							Projeto
+							Sobre o Projeto
 						</h3>
 
-						<p class="stext-113 cl6 p-b-26">
-						
-						E-commerce de moda com acessibilidade nos produtos(roupas para pessoas com mobilidade reduzida, amputados, cadeirantes, pessoas com nanismoe não PcDs) e na  aplicação  web(libras,  teclas  de  atalho,  navegação  portabulação, contrastee alteração  de  fonte).Nosso  site  pretende  incluir  roupas  para  todos os  públicos,  com produtos atrativos àum preço acessível.
+						<p class="stext-117 cl6 p-b-26">
+							Todos é um e-commerce de moda inclusiva que oferece produtos para diversos públicos, como
+							pessoas com mobilidade reduzida, nanismo, amputados, cadeirantes, não PcDs, entre outros. A
+							aplicação web possuí recursos de acessibilidade, como: libras, atalho, contraste e alteração de fonte, que são explicados na página
+							"Acessibilidade", localizada no menu superior. 
 						</p>
-							 
 
-						<p class="stext-113 cl6 p-b-26">
-						O varejo  de  moda  online é  um  dos  setores  que  têm  ajudado  a  alavancar  o crescimento   do   comércio   eletrônico   no   Brasil.Os   dados   da39ª.   edição   do Webshoppersindicam que a categoria Moda e Acessórios registrou uma alta de 59% no  volume  de  pedidos  (comparando  2017  e  2018).Em  2019 osetor representava13,6% do total de pedidos do e-commerce. O impacto do fechamento das lojas físicas do  comércio  não  essencial  em  razão  da  pandemia  provocada  pela  Covid-19 ocasionou um aumento da procura virtual pelo segmento de moda e acessórios. De acordo com o Relatório do E-commerce no Brasil Abril/2021 –realizado pela agência Conversion –o faturamento subiu cerca de 63,18% nas vendas online.Hoje, século XXI, o setor de moda e vestuáriomovimenta mais de 3 trilhões de dólares.
+						<p class="stext-117 cl6 p-b-26">
+							Hoje, século XXI, o setor de moda e vestuário movimenta mais de 3 trilhões de dólares. Com
+							as melhorias na tecnologia da informação, a globalização cresceu. O mundo é aproximado, e a
+							economia mundial está rapidamente se tornando um único sistema interdependente. Mas pouco
+							desse investimento tem foco em roupas adaptadas, visando a autonomia de pessoas
+							com deficiência. Acreditamos que inclusão é um direito e que a moda transforma, com
+							capacidade de aumentar a autoestima do indivíduo e ser instrumento de inserção em contextos
+							sociais. Nosso propósito é oferecer produtos atrativos, confortáveis, fáceis de vestir, com um preço
+							acessível, para todas as pessoas, sem exceção.
+							
 						</p>
 												
 					</div>
@@ -319,35 +403,29 @@
 				<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
 					<div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
 						<h3 class="mtext-111 cl2 p-b-16">
-							Equipe
+							Sobre a Equipe
 						</h3>
 
-						<p class="stext-113 cl6 p-b-26">
-						Nosso time é composto por 3 estudantes do curso de Desenvolvimento de Software Multiplataforma, na FATEC Zona Leste. 
-					
+						<p class="stext-117 cl6 p-b-26">
+							Nosso time é composto por 3 estudantes de Desenvolvimento de Software Multiplataforma.
+							Atualmente estamos no 3º semestre e pertencemos a primeira turma de DSM da FATEC Zona Leste.
 						</p>
-						
-						<p class="stext-113 cl6 p-b-26">
-						Bianca Reis, 19 anos - Analista de Software / bianca.nascimento6@fatec.sp.gov.br 
+
+						<p class="stext-117 cl6 p-b-26">
+							- Bianca Reis, 19 anos - Analista de Software / bianca.nascimento6@fatec.sp.gov.br <br>
+							- Daniela, 18 anos - Desenvolvedora Front-End / daniela.houck@fatec.sp.gov.br <br>
+							- Paulo, 26 anos - Desenvolvedor Full-Stack / paulo.jesus2@fatec.sp.gov.br
 						</p>
-						
-						<p class="stext-113 cl6 p-b-26">
-						Daniela Houck, 18 anos - Front-End / daniela.houck@fatec.sp.gov.br 
-						</p>
-						
-						<p class="stext-113 cl6 p-b-26">
-						Paulo Jesus, 26 anos - Full-Stack / paulo.jesus2@fatec.sp.gov.br 
-						</p>
-							
-							
+
+
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
 							<p class="stext-114 cl6 p-r-40 p-b-11">
-								Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+								A tecnologia move o mundo.
 							</p>
 
 							<span class="stext-111 cl8">
-								- Steve Job’s 
+								- Steve Job’s
 							</span>
 						</div>
 					</div>
@@ -431,14 +509,14 @@
 	</style>
 
 <!--===============================================================================================-->	
-	<script th:src="@{vendor/jquery/jquery-3.2.1.min.js}"></script>
+	<script th:src="@{/vendor/jquery/jquery-3.2.1.min.js}"></script>
 <!--===============================================================================================-->
-	<script th:src="@{vendor/animsition/js/animsition.min.js}"></script>
+	<script th:src="@{/vendor/animsition/js/animsition.min.js}"></script>
 <!--===============================================================================================-->
-	<script th:src="@{vendor/bootstrap/js/popper.js}"></script>
-	<script th:src="@{vendor/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/bootstrap.min.js}"></script>
 <!--===============================================================================================-->
-	<script th:src="@{vendor/select2/select2.min.js}"></script>
+	<script th:src="@{/vendor/select2/select2.min.js}"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -448,9 +526,9 @@
 		})
 	</script>
 <!--===============================================================================================-->
-	<script th:src="@{vendor/MagnificPopup/jquery.magnific-popup.min.js}"></script>
+	<script th:src="@{/vendor/MagnificPopup/jquery.magnific-popup.min.js}"></script>
 <!--===============================================================================================-->
-	<script th:src="@{vendor/perfect-scrollbar/perfect-scrollbar.min.js}"></script>
+	<script th:src="@{/vendor/perfect-scrollbar/perfect-scrollbar.min.js}"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -467,7 +545,7 @@
 		});
 	</script>
 <!--===============================================================================================-->
-	<script th:src="@{js/main.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
 	
 </body>
 </html>

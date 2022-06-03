@@ -144,12 +144,12 @@
 								<i class="zmdi zmdi-phone"></i>
 							</div>
 						</a>
-						
-						<a href="#">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-							<i class="zmdi zmdi-account"></i>
 
-						</div>
+						<a href="#">
+							<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+								<i class="zmdi zmdi-account"></i>
+
+							</div>
 						</a>
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  js-show-cart">
 							<i class="zmdi zmdi-shopping-cart"></i>
@@ -168,29 +168,29 @@
 
 			<!-- Icon header -->
 			<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
+			<div class="wrap-icon-header flex-w flex-r-m">
 
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-							<i class="zmdi zmdi-search"></i>
-						</div>
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+					<i class="zmdi zmdi-search"></i>
+				</div>
 
 
-						<a th:href="@{/todos/contact}">
-							<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-								<i class="zmdi zmdi-phone"></i>
-							</div>
-						</a>
-						
-						<a href="#">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-							<i class="zmdi zmdi-account"></i>
-
-						</div>
-						</a>
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  js-show-cart">
-							<i class="zmdi zmdi-shopping-cart"></i>
-						</div>
+				<a th:href="@{/todos/contact}">
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+						<i class="zmdi zmdi-phone"></i>
 					</div>
+				</a>
+
+				<a href="#">
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+						<i class="zmdi zmdi-account"></i>
+
+					</div>
+				</a>
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11  js-show-cart">
+					<i class="zmdi zmdi-shopping-cart"></i>
+				</div>
+			</div>
 
 			<!-- Button show menu -->
 			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
@@ -203,23 +203,6 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">
-						<a style="color:#FFF;" href="#conteudo" accesskey="1" title="Ir diretamente para o conteúdo"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o conteúdo [1]
-						</a>
-						<a style="color:#FFF;" href="#menu" accesskey="2" title="Ir diretamente para o menu"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o menu [2]
-						</a>
-						<a style="color:#FFF;" href="#rodape" accesskey="3" title="Ir diretamente para o rodapé"
-							class="flex-c-m trans-04 p-lr-7">
-							Ir para o rodapé [3]
-						</a>
-					</div>
-				</li>
-
 				<li>
 					<div class="right-top-bar flex-w h-full">
 						<a th:href="@{/todos/acessibilidade}" title="Ir para a página de Acessibilidade"
@@ -251,7 +234,7 @@
 			<ul class="main-menu-m">
 				<li><a th:href="@{/todos/product}">Produtos</a></li>
 				<li><a href="#">Feminino</a></li>
-				<li><a href="#">Masculino</a</li>
+				<li><a href="#">Masculino</a></li>
 				<li><a th:href="@{/todos/about}">Sobre</a></li>
 			</ul>
 		</div>
@@ -381,7 +364,7 @@
 						</div>
 						<br><br>
 						<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="1600">
-							<a href="product.html"
+							<a th:href="@{/todos/product}"
 								class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 								Veja mais
 							</a>
@@ -395,7 +378,7 @@
 	<img src="images/ziper.fw.png" alt="IMG-Ziper" style="width: 100%;">
 
 
-	<div id="bloco_citacao" style="margin-left: 10%;">
+	<div class="txt-left m-lr-auto p-l-70">
 
 		<div id="aspas" style="display: inline-block;" class="cl13">
 			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote"
@@ -410,7 +393,7 @@
 			<h2 class="cl13" style="font-size: 2em;">
 				A moda deve ser uma forma de escapismo e não uma forma de prisão
 			</h2>
-			<p style="color: #E17525;"> Alexander McQueen</p>
+			<p class="cl14"> Alexander McQueen</p>
 		</div>
 
 	</div>
@@ -424,12 +407,11 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/home01.fw.png" alt="IMG-BANNER">
 
-						<a href="product.html"
-							class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Veja mais
+									Facilidade
 								</div>
 							</div>
 						</a>
@@ -441,13 +423,12 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/home02.fw.png" alt="IMG-BANNER">
 
-						<a href="product.html"
-							class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Veja mais
+									Conforto
 								</div>
 							</div>
 						</a>
@@ -459,12 +440,11 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/home03.fw.png" alt="IMG-BANNER">
 
-						<a href="product.html"
-							class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Veja mais
+									Segurança
 								</div>
 							</div>
 						</a>
@@ -476,12 +456,11 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/home04.fw.png" alt="IMG-BANNER">
 
-						<a href="product.html"
-							class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Veja mais
+									Agilidade
 								</div>
 							</div>
 						</a>
@@ -493,62 +472,37 @@
 		</div>
 	</div>
 
-	<!--
-	<div class="frases_home" style="text-align: center; display: flex; align-items: center; justify-content: center;">
-
-      <p style="display: inline-block; padding: 60px; padding-top: 30px;" class="cl14 ltext-202 ">Moda é <br> linguagem <br> instantânea</p>
-
-	  <img src="images/homeBotao.fw.png" alt="botao" style="display: inline-block; width: 22px;">
-
-	  <p style="display: inline-block; padding: 60px; padding-top: 30px;" class="cl14 ltext-202  ">Para ser <br> insubstituível <br> precisa ser diferente</p>
-
-	  <img src="images/homeBotao.fw.png" alt="botao" style="display: inline-block; width: 22px;">
-
-	  <p style="display: inline-block; padding: 60px; padding-top: 30px;" class="cl14 ltext-202  ">Inclusão não é <br> um benefício, é <br> um direito </p>
-
-	  <img src="images/homeBotao.fw.png" alt="botao" style="display: inline-block; width: 22px;">
-
-	  <p style="display: inline-block; padding: 60px; padding-top: 30px;" class="cl14 ltext-202  ">Sua roupas <br> sem ajustes, <br> sem cortes</p>
-
-	</div>
--->
-
-
 	<div class="container">
-
-		<div class="row flex-c-m" style="text-align: center; margin-left: 10px; margin-right: 10px; ">
-
-
-			<p class="cl14 ltext-202 texto col-md-1 col-xl-1 p-b-30 m-lr-auto">Moda é <br> linguagem <br> instantânea
-			</p>
-
-			<div class="col-md-1 col-xl-1 p-b-30 p-t-30 m-lr-auto">
-				<img src="images/homeBotao.fw.png" alt="botao1" style="width: 25px; height: 25px;"></img>
+		<div class="row txt-center flex-c-m">
+			<div class="col-lg-2 txt-center col-sm-2 m-tb-9">
+				<p class="cl14 mtext-107">Moda é linguagem instantânea</p>
 			</div>
-
-			<p class="cl14 ltext-202 texto col-md-1 col-xl-1 p-b-30 m-lr-auto">Para ser <br> insubstituível <br> precisa
-				ser diferente</p>
-
-			<div class="col-md-1 col-xl-1 p-b-30 p-t-30 m-lr-auto">
-				<img src="images/homeBotao.fw.png" alt="botao2" style="width: 25px; height: 25px;"></img>
+			
+			<div class=" col-lg-1 col-sm-1 m-tb-9">
+				<img src="images/homeBotao.fw.png" alt="botao1">
 			</div>
-
-			<p class="cl14 ltext-202 texto col-md-1 col-xl-1 p-b-30 m-lr-auto">Inclusão não é <br> um benefício, é <br>
-				um direito </p>
-
-			<div class="col-md-1 col-xl-1 p-b-30 p-t-30 m-lr-auto">
-				<img src="images/homeBotao.fw.png" alt="botao3" style="width: 25px; height: 25px;"></img>
+			
+			<div class=" col-lg-2 txt-center col-sm-2 m-tb-9">
+				<p class="cl14 mtext-107">Para ser insubstituível precisa ser diferente</p>
 			</div>
-
-			<p class="cl14 ltext-202 texto col-md-1 col-xl-1 p-b-30 m-lr-auto">Sua roupas <br> sem ajustes, <br> sem
-				cortes</p>
-
-
-
+			
+			<div class=" col-lg-1 col-sm-1 m-tb-9">
+				<img src="images/homeBotao.fw.png" alt="botao2">
+			</div>
+			
+			<div class=" col-lg-2 txt-center col-sm-2 m-tb-9">
+				<p class="cl14 mtext-107">Inclusão não é um benefício, é um direito</p>
+			</div>
+			
+			<div class="col-lg-1 col-sm-1 m-tb-9">
+				<img src="images/homeBotao.fw.png" alt="botao3">
+			</div>
+			
+			<div class=" col-lg-2 txt-center col-sm-2 m-tb-9">
+				<p class="cl14 mtext-107" >Sua roupas sem ajustes, sem cortes</p>
+			</div>
 		</div>
 	</div>
-
-
 
 
 
