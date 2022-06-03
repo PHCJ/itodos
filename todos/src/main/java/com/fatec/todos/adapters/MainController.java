@@ -24,4 +24,8 @@ public class MainController {
 	public ModelAndView product() {
 		return new ModelAndView("product");
 	}
+	@GetMapping("/about")
+	public ModelAndView sobre() {
+		return new ModelAndView("about");
+	}
 }
