@@ -39,19 +39,7 @@
 </head>
 
 <body>
-	<!--Libras-->
-	<div vw class="enabled">
-		<div vw-access-button class="active"></div>
-		<div vw-plugin-wrapper>
-			<div class="vw-plugin-top-wrapper"></div>
-		</div>
-	</div>
-	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-	<script>
-		new window.VLibras.Widget('https://vlibras.gov.br/app');
-	</script>
 	<!-- Header -->
-			<!-- Header -->
 	<header>
 		<!--Libras-->
 		<div vw class="enabled">
@@ -154,7 +142,7 @@
 							</div>
 						</a>
 						
-						<a href="#">
+						<a th:href="@{/todos/login}">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
 							<i class="zmdi zmdi-account"></i>
 
@@ -191,7 +179,7 @@
 							</div>
 						</a>
 						
-						<a href="#">
+						<a th:href="@{/todos/login}">
 						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
 							<i class="zmdi zmdi-account"></i>
 
@@ -216,7 +204,7 @@
 				
 				<li>
 					<div class="right-top-bar flex-w h-full">
-						<a th:href="@{/todos/acessibilidade}" title="Ir para a página de Acessibilidade"
+						<a th:href="@{/todos/accessibility}" title="Ir para a página de Acessibilidade"
 							class="flex-c-m trans-04 p-lr-7">
 							Acessibilidade
 						</a>
@@ -244,8 +232,8 @@
 
 			<ul class="main-menu-m">
 				<li><a th:href="@{/todos/product}">Produtos</a></li>
-				<li><a href="#">Feminino</a></li>
-				<li><a href="#">Masculino</a</li>
+				<li><a th:href="@{/todos/female}">Feminino</a></li>
+				<li><a th:href="@{/todos/male}">Masculino</a</li>
 				<li><a th:href="@{/todos/about}">Sobre</a></li>
 			</ul>
 		</div>
