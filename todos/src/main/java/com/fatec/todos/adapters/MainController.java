@@ -16,12 +16,12 @@ public class MainController {
 	public ModelAndView home() {
 		return new ModelAndView("admin/home");
 	}
-	@GetMapping("/acessibilidade")
+	@GetMapping("/accessibility")
 	public ModelAndView acessibilidade() {
 		return new ModelAndView("acessibilidade");
 	}
 	@GetMapping("/product")
-	public ModelAndView product() {
+	public ModelAndView produto() {
 		return new ModelAndView("product");
 	}
 	@GetMapping("/about")
@@ -35,5 +35,19 @@ public class MainController {
 	@GetMapping("/shoping-cart")
 	public ModelAndView carrinho() {
 		return new ModelAndView("shoping-cart");
+	}
+	
+	@GetMapping("/female")
+	public ModelAndView feminino() {
+		return new ModelAndView("female");
+	}
+	
+	@GetMapping("/male")
+	public ModelAndView masculino() {
+		return new ModelAndView("male");
+	}
+	@GetMapping("/login")
+	public ModelAndView login() {
+		return new ModelAndView("login");
 	}
 }
