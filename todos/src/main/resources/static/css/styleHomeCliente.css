@@ -1,0 +1,10 @@
+@media screen and (max-width: 767px) {
+	.banner{
+		background-image: url(/images/banner-mobile.fw.png)
+	}
+}
+@media screen and (min-width: 768px) {
+	.banner{
+  		background-image: url(/images/capa_home.fw.png)
+	}
+}

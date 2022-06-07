@@ -12,19 +12,43 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
 	<!-- MDB -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
-
 	<!-- MDB -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+	<!-- Logo -->
+	<style>
+		@font-face {
+			font-family: 'lucidaLogo';
+			src: url('/fonts/LucidaCalligraphy/LucidaUnicodeCalligraphy.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		#logo {
+			font-family: 'lucidaLogo';
+			font-size: 4em;
+			color: #e17525;
+			font-weight: normal;
+			margin: 10px 15px;
+		}
+
+		.logo {
+			width: 50px;
+			position: absolute;
+			margin: 15px;
+			z-index: 10;
+		}
+	</style>
 </head>
 
 <body>
 	<section class="vh-100"
 		style="background: rgb(199,191,236); background: linear-gradient(90deg, rgba(199,191,236,0.9668242296918768) 0%, rgba(225,117,37,1) 100%);">
+		<div class="row logo">
+			<a href="/">
+				<p id="logo">i</p>
+			</a>
+		</div>
 		<div class="container py-5 h-100">
-		
-				<a href="/" style="width: 50px; position:absolute; margin: 15px; z-index: 10;">
-					<p style="font-family: 'lucida calligraphy'; font-size: 3em; color: #e17525;">i</p>
-				</a>
 			<div class="row d-flex justify-content-center align-items-center h-100">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
 					<div class="card shadow-2-strong" style="border-radius: 1rem;">
@@ -56,7 +80,6 @@
 								type="submit"><i class="fab fa-google me-2"></i> Entre com o Google</button>
 							<button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
 								type="submit"><i class="fab fa-facebook-f me-2"></i>Entre com o facebook</button>
-
 						</div>
 					</div>
 				</div>
